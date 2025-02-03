@@ -3,7 +3,6 @@
     const cityInput = document.getElementById("search_input");
     const searchBtn = document.getElementById("search_btn");
     const weatherEl = document.querySelector('.container');
-
     const tempratureEl = document.getElementById("temprature");
     const locationEl = document.getElementById("location");
     const weatherImgEl = document.getElementById("weather_img");
@@ -17,24 +16,34 @@
         const city = cityInput.value.trim();
 
         if(city) {
-            fetchWeather(city)
-            cityInput.value = "";
+            fetchWeather(city);
         }else {
             alert('Please enter a city');
         }
     });
 
+    cityInput.addEventListener('keydown', (event) => {
+        if(event.key === 'Enter') {
+            event.preventDefault();
+
+            const city = cityInput.value.trim();
+            if(city) {
+                fetchWeather(city);
+            } else {
+                alert("Please enter a city");
+            };
+        };
+    });
 
     const fetchWeather = async (city) => {
         try {
-            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&unit=matrics`)
+            const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&unit=matrics`);
+
             if(!response.ok) {
-                throw new Error('City not found')
+                throw new Error('City not found');
             }
-            const data = await response.json()
-            displayData(data)
-            console.log(data);
-            
+            const data = await response.json();
+            displayData(data);
         } catch(error) {
             console.error(`Error fetching data`, error);
         }
@@ -49,6 +58,7 @@
 
         const iconUrl = data.current.condition.icon;
 
+        cityInput.value = "";
         locationEl.innerText = location;
         tempratureEl.innerText = temprature;
         weatherImgEl.src = iconUrl;
