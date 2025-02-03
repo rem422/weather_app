@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="searchbar_container">
+            <input id="search_input" type="text" placeholder="Enter Location">
+            <a href="#" id="search_btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+        </div>
+        <div class="location_display">
+            <i class="fa-solid fa-location-dot"></i>
+            <p id="location">__</p>
+        </div>
+        <div class="weather_info">
+            <img id="weather_img" src="./images/404.png" alt="condition">
+            <h1 id="temprature">--&deg;c</h1>
+            <p id="condition">N/A</p>
+        </div>
+        <div class ="weather_condition">
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i>
+                <div class="text">
+                    <span id="humidity">_ _%</span>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="winds">
+                <i class="fa-solid fa-wind"></i>
+                <div class="text">
+                    <span id="wind">_ _Km/h</span>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+    </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>

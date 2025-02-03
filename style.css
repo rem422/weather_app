@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #06283D;
+}
+
+.container {
+    background: #fff;
+    color: #06283D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 400px;
+    height: auto;
+    max-width: 90%;
+    margin:0 auto;
+    margin-top: 5rem;
+    padding: 2rem 1rem;
+} 
+
+.container .searchbar_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 1.2rem;
+    width: 100%;
+    border: 2px solid lightgray;
+    border-radius: 50px;
+}
+
+.container .searchbar_container i {
+    font-size: 1rem;
+    color: #06283D;
+}
+
+.container .searchbar_container #search_input {
+    padding:0 .6rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1.1rem;
+}
+
+.container .searchbar_container #search_input:focus {
+    outline: none;
+}
+
+.container .searchbar_container #search_btn {
+    background-color: #DFF6FF;
+    color: #06283D;
+    padding: .4rem;
+    border-radius: 50%;
+}
+
+.location_display {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.2rem 0;
+    text-align: start;
+    font-size: 1.3rem;
+    color: #06283D;
+}
+
+.location_display i {
+    padding-right: .3rem;
+}
+
+.weather_info {
+    text-align: center;
+}
+
+.weather_info img{
+    width: 70px;
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+
+.weather_info h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.weather_info p {
+    font-size: 1.2rem;
+}
+
+.weather_condition {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%; 
+    margin-top: 3rem;
+}
+
+.humidity, .winds {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.humidity i, 
+.winds i {
+    font-size: 1.6rem;
+    margin: 0 1rem;
+}
+
+.humidity .text, 
+.winds .text {
+    padding-right: 2rem;
+}
+
+.humidity .text span, 
+.winds .text span {
+    font-size: 1.3rem;
+}
+
+.humidity .text p, 
+.winds .text p {
+    font-size: .8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
